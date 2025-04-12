@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourtsideConnect</title>
+    <link
+      rel="icon"
+      href="./images/basketball-logo.png"
+      type="image/icon type"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Frameworks -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+
+    <nav class="nav-bar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#">CourtsideConnect</a>
+          <a href="#">
+            <img
+              src="./images/basketball-logo.png"
+              alt=""
+              id="basketballLogo"
+            />
+          </a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Home</a></li>
+
+          <li>
+            <a href="./pages/tickets/tickets.html" class="nav-link">Tickets</a>
+          </li>
+
+          <li id="nba-li">
+            <a href="#">NBA</a>
+            <img
+              src="./images/arrow-down.svg"
+              alt=""
+              style="width: 1.5rem; height: 1.5rem"
+            />
+            <ul class="dropdown" id="nba-dropdown">
+              <button type="button" class="button-donate">
+                All NBA tickets
+              </button>
+            </ul>
+          </li>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                NBA
+                <img
+                  src="./images/arrow-down.svg"
+                  alt=""
+                  style="width: 1.5rem; height: 1.5rem"
+                />
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body" id="nba-accordion"></div>
+            </div>
+          </div>
+
+          <li id="wnba-li">
+            <a href="#">WNBA</a>
+            <img
+              src="./images/arrow-down.svg"
+              alt=""
+              style="width: 1.5rem; height: 1.5rem"
+            />
+            <ul class="dropdown" id="wnba-dropdown">
+              <li>WNBA All-star</li>
+              <button type="button" class="button-donate">
+                All WNBA tickets
+              </button>
+            </ul>
+          </li>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                WNBA
+                <img
+                  src="./images/arrow-down.svg"
+                  alt=""
+                  style="width: 1.5rem; height: 1.5rem"
+                />
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body" id="wnba-accordion">
+                WNBA All-star
+              </div>
+            </div>
+          </div>
+
+          <li><a href="./pages/about/about.html" class="nav-link">About</a></li>
+
+          <li>
+            <a href="./pages/contact/contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <a href="./pages/tickets/tickets.html" class="button-wrap">
+          <button type="button" class="button-donate">Buy Tickets</button>
+        </a>
+        <input
+          type="checkbox"
+          role="button"
+          aria-label="Display the menu"
+          class="menu"
+        />
+      </div>
+    </nav>
+
+    <!-- Above the Folds -->
+
+    <div class="above-the-folds">
+      <img src="./images/players.png" alt="" id="playersPhoto" />
+
+      <div>
+        <h1>
+          Secure your <br />
+          NBA & WNBA <br />
+          tickets now
+        </h1>
+        <p>
+          Our exclusive ticket packages offer unbeatable views of your favorite
+          stars as they slam, shoot, and soar across the hardwood floor. Secure
+          your spot today and be part of basketball history in the making as
+          championship dreams unfold before your eyes.
+        </p>
+        <a href="./pages/tickets/tickets.html" class="button-wrap">
+          <button type="button" class="button-donate">Buy Tickets</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Popular Events -->
+
+    <section>
+      <div class="popular-events">
+        <h2>Popular NBA games.</h2>
+        <h3 style="color: hsl(0, 0%, 50%)">Hottest matchups you can't miss.</h3>
+        <div class="popular-events-container swiper">
+          <div id="popular-events-cards" class="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Events -->
+
+    <section>
+      <h2>Featured basketball events.</h2>
+      <h3 style="color: hsl(0, 0%, 50%)">Be a part of basketball history.</h3>
+
+      <div class="featured-event-container">
+        <div class="featured-event-div">
+          <img
+            src="./images/playoffs.png"
+            alt=""
+            class="featured-event-image"
+          />
+
+          <div class="featured-event-nba">
+            <h2 class="featured-event-title">NBA Championship Playoffs</h2>
+            <p>
+              Limited premium seats are available for the NBA Championship
+              Playoffs. Watch top teams battle for the title in electrifying
+              matchups. Experience the finals with our exclusive courtside
+              packages.
+            </p>
+            <a href="./pages/tickets/tickets.html" class="button-wrap">
+              <button type="button" class="button-donate">Buy Tickets</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="featured-event-div" id="divWnba">
+          <div class="featured-event-wnba">
+            <h2 class="featured-event-title">WNBA Summer Showdown</h2>
+            <p>
+              The WNBA Summer Showdown features elite matchups across the
+              league. Secure the best views in the arena for this exciting
+              summer competition. Take advantage of our special group ticket
+              offers to enjoy the games with your friends and family.
+            </p>
+            <a href="./pages/tickets/tickets.html" class="button-wrap">
+              <button type="button" class="button-donate">Buy Tickets</button>
+            </a>
+          </div>
+
+          <img src="./images/wnba.png" alt="" class="featured-event-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- What Clients Say ? -->
+
+    <section>
+      <h2>Our customer stories.</h2>
+      <h3 style="color: hsl(0, 0%, 50%)">Basketball dreams delivered.</h3>
+      <div class="testimonial-container">
+        <div class="testimonial-card-container">
+          <div class="testimonial-cards">
+            <div class="testimonial-card">
+              <img
+                src="./images/people3.png"
+                alt=""
+                class="testimonial-image"
+              />
+              <h3>Michael K.</h3>
+              <sub>Los Angeles Lakers fan</sub>
+              <img
+                src="./images/quotes.png"
+                alt=""
+                class="testimonial-quotes"
+              />
+              <p>
+                The best ticket platform for true fans! I've never missed a
+                Lakers game since I started using Courtside Connect.
+              </p>
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./images/people2.png"
+                alt=""
+                class="testimonial-image"
+              />
+              <h3>Sarah M.</h3>
+              <sub>Phoenix Suns fan</sub>
+              <img
+                src="./images/quotes.png"
+                alt=""
+                class="testimonial-quotes"
+              />
+              <p>
+                CourtsideConnect made my dream of watching my favorite players
+                up close a reality! Go Phoenix!
+              </p>
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./images/people1.png"
+                alt=""
+                class="testimonial-image"
+              />
+              <h3>David T.</h3>
+              <sub>Sacremento Kings fan</sub>
+              <img
+                src="./images/quotes.png"
+                alt=""
+                class="testimonial-quotes"
+              />
+              <p>
+                I've tried other platforms, but CourtsideConnect always gets me
+                the best seats at the best prices!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-paragraph">
+          <h2>The Difference</h2>
+          <p>
+            At CourtsideConnect, our customers are at the heart of everything we
+            do. We're passionate about connecting basketball fans with
+            unforgettable courtside experiences at the best possible prices.
+            Join thousands of satisfied customers who've made Courtside Connect
+            their first choice for premium NBA tickets.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose CourtsideConnect? -->
+
+    <section>
+      <div class="paragraph-why-choose">
+        <h2>Your courtside advantage.</h2>
+        <h3 style="color: hsl(0, 0%, 50%)">
+          All-access pass to basketball brilliance.
+        </h3>
+        <div class="card-cointainer">
+          <div id="whyCards">
+            <div class="why-card">
+              <div class="why-card-body">
+                <img src="./images/device.png" alt="" class="why-card-icon" />
+                <h3>Unmatched Access</h3>
+                <p>
+                  We provide the most immersive basketball experience with
+                  premium ticket packages.
+                </p>
+              </div>
+            </div>
+            <div class="why-card">
+              <div class="why-card-body">
+                <img src="./images/verified.png" alt="" class="why-card-icon" />
+                <h3>Verified Tickets</h3>
+                <p>
+                  100% Authentic, Guaranteed. Every ticket is verified and comes
+                  with our satisfaction promise.
+                </p>
+              </div>
+            </div>
+            <div class="why-card">
+              <div class="why-card-body">
+                <img src="./images/infinity.png" alt="" class="why-card-icon" />
+                <h3>Diverse Experience</h3>
+                <p>
+                  Celebrating both NBA and WNBA - supporting the entire
+                  basketball ecosystem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <hr />
+      <div class="footer-container">
+        <div class="company-paragraph">
+          <div class="logo">
+            <a href="#">CourtsideConnect</a>
+            <a href="#">
+              <img
+                src="./images/basketball-logo.png"
+                alt=""
+                id="basketballLogo"
+              />
+            </a>
+          </div>
+          <p>
+            Experience the thrill of courtside action with guaranteed authentic
+            tickets to the biggest NBA and WNBA matchups.
+          </p>
+          <a href="https://www.facebook.com/nba"
+            ><img src="./images/facebook.png" alt="" class="social-media-icon"
+          /></a>
+          <a href="https://x.com/NBA"
+            ><img src="./images/twitter.png" alt="" class="social-media-icon"
+          /></a>
+          <a href="https://www.instagram.com/nba/"
+            ><img src="./images/instagram.png" alt="" class="social-media-icon"
+          /></a>
+        </div>
+
+        <div class="footer-nav">
+          <p>Browse</p>
+          <a href="#">Home</a>
+          <br />
+          <a href="./pages/tickets/tickets.html">Tickets</a>
+          <br />
+          <a href="./pages/about/about.html">About</a>
+          <br />
+          <a href="./pages/contact/contact.html">Contact</a>
+        </div>
+
+        <div class="footer-nav">
+          <p>Services</p>
+          <a href="./pages/tickets/tickets.html">NBA tickets</a>
+          <br />
+          <a href="./pages/tickets/tickets.html">WNBA tickets</a>
+        </div>
+
+        <div class="footer-nav">
+          <p>Contact</p>
+          <sub>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-telephone-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
+            </svg>
+            +1 770 653 8096
+          </sub>
+          <br />
+          <sub>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-geo-alt-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+              />
+            </svg>
+            Los Angeles California, USA
+          </sub>
+          <br />
+          <sub>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-envelope-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+              />
+            </svg>
+            support@courtsideconnect.com
+          </sub>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="footer-copyright-paragraph">
+        <p>© 2025 CourtsideConnect. All rights reserved.</p>
+        <p>Designed and developed with passion by Aleksic.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

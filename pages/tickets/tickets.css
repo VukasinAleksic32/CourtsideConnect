@@ -1,0 +1,452 @@
+:root {
+  --colorprimary: black;
+  --colorsecondary: white;
+  --coloraccent: radial-gradient(
+      circle at 67% 83%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 1%,
+      transparent 1%,
+      transparent 5%,
+      transparent 5%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 24% 80%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 27%,
+      transparent 27%,
+      transparent 63%,
+      transparent 63%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 23% 5%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 26%,
+      transparent 26%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 21% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 35%,
+      transparent 35%,
+      transparent 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 10% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 21%,
+      transparent 21%,
+      transparent 81%,
+      transparent 81%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 19% 61%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 20%,
+      transparent 20%,
+      transparent 61%,
+      transparent 61%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 13% 77%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 63%,
+      transparent 63%,
+      transparent 72%,
+      transparent 72%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 30% 93%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 33%,
+      transparent 33%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, #fca311, #d78703);
+  --coloraccentopposite: radial-gradient(
+      circle at 67% 83%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 1%,
+      transparent 1%,
+      transparent 5%,
+      transparent 5%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 24% 80%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 27%,
+      transparent 27%,
+      transparent 63%,
+      transparent 63%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 23% 5%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 26%,
+      transparent 26%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 21% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 35%,
+      transparent 35%,
+      transparent 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 10% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 21%,
+      transparent 21%,
+      transparent 81%,
+      transparent 81%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 19% 61%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 20%,
+      transparent 20%,
+      transparent 61%,
+      transparent 61%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 13% 77%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 63%,
+      transparent 63%,
+      transparent 72%,
+      transparent 72%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 30% 93%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 33%,
+      transparent 33%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, #d78703, #fca311);
+  --coloraccent2: #023047;
+  --ff: "Roboto", sans-serif;
+  --h1: bold 3.375rem/4rem var(--ff);
+  --h2: 600 2.25rem/2.25rem var(--ff);
+  --h3: 500 1.5rem/1.875rem var(--ff);
+  --links: bold 1.125rem/1.125rem var(--ff);
+  --p: 1.125rem/1.875rem var(--ff);
+  --subtext: 1rem/1.25rem var(--ff);
+  --transition: 0.5s ease-in-out;
+  --shadow: #00000030 1px 2px 10px 2px;
+  --shadowdark: #00000030 0px 5px 10px 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* USA map with NBA & WNBA icons*/
+
+.usa-tickets-container {
+  width: 100%;
+}
+
+.usa-tickets-wrapper {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(80, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+
+.usa-tickets-wrapper p {
+  display: none;
+}
+
+.nba-team-logo {
+  width: 90%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.usa-tickets-wrapper .nba-team-logo:hover {
+  transform: scale(150%);
+  box-shadow: var(--shadowdark);
+  z-index: 1;
+}
+
+.usa-tickets-wrapper #usa-map {
+  width: 100%;
+  grid-row: 1/16;
+  grid-column: 1/81;
+}
+
+.usa-tickets-wrapper #los-angeles-lakers {
+  grid-row: 10/11;
+  grid-column: 10/14;
+}
+
+.usa-tickets-wrapper #los-angeles-sparks {
+  grid-row: 9/10;
+  grid-column: 12/16;
+}
+
+.usa-tickets-wrapper #las-vegas-aces {
+  grid-row: 8/9;
+  grid-column: 14/18;
+}
+
+.usa-tickets-wrapper #la-clippers {
+  grid-row: 9/10;
+  grid-column: 8/12;
+}
+
+.usa-tickets-wrapper #golden-state-warriors {
+  grid-row: 7/8;
+  grid-column: 5/9;
+}
+
+.usa-tickets-wrapper #sacramento-kings {
+  grid-row: 6/7;
+  grid-column: 7/11;
+}
+
+.usa-tickets-wrapper #portland-trail-blazers {
+  grid-row: 4/5;
+  grid-column: 8/12;
+}
+
+.usa-tickets-wrapper #seattle-storm {
+  grid-row: 2/3;
+  grid-column: 10/14;
+}
+
+.usa-tickets-wrapper #phoenix-suns {
+  grid-row: 10/11;
+  grid-column: 18/22;
+}
+
+.usa-tickets-wrapper #phoenix-mercury {
+  grid-row: 9/10;
+  grid-column: 20/24;
+}
+
+.usa-tickets-wrapper #utah-jazz {
+  grid-row: 7/8;
+  grid-column: 20/24;
+}
+
+.usa-tickets-wrapper #denver-nuggets {
+  grid-row: 7/8;
+  grid-column: 28/32;
+}
+
+.usa-tickets-wrapper #oklahoma-city-thunder {
+  grid-row: 9/10;
+  grid-column: 39/43;
+}
+
+.usa-tickets-wrapper #dallas-mavericks {
+  grid-row: 11/12;
+  grid-column: 39/43;
+}
+
+.usa-tickets-wrapper #dallas-wings {
+  grid-row: 11/12;
+  grid-column: 35/39;
+}
+
+.usa-tickets-wrapper #houston-rockets {
+  grid-row: 12/13;
+  grid-column: 42/46;
+}
+
+.usa-tickets-wrapper #san-antonio-spurs {
+  grid-row: 12/13;
+  grid-column: 37/41;
+}
+
+.usa-tickets-wrapper #new-orleans-pelicans {
+  grid-row: 12/13;
+  grid-column: 50/54;
+}
+
+.usa-tickets-wrapper #memphis-grizzlies {
+  grid-row: 9/10;
+  grid-column: 51/55;
+}
+
+.usa-tickets-wrapper #minnesota-timberwolves {
+  grid-row: 4/5;
+  grid-column: 42/46;
+}
+
+.usa-tickets-wrapper #minnesota-lynx {
+  grid-row: 3/4;
+  grid-column: 41/45;
+}
+
+.usa-tickets-wrapper #milwaukee-bucks {
+  grid-row: 5/6;
+  grid-column: 48/52;
+}
+
+.usa-tickets-wrapper #chicago-bulls {
+  grid-row: 6/7;
+  grid-column: 49/53;
+}
+
+.usa-tickets-wrapper #chicago-sky {
+  grid-row: 7/8;
+  grid-column: 48/52;
+}
+
+.usa-tickets-wrapper #indiana-pacers {
+  grid-row: 7/8;
+  grid-column: 53/57;
+}
+
+.usa-tickets-wrapper #indiana-fever {
+  grid-row: 6/7;
+  grid-column: 53/57;
+}
+
+.usa-tickets-wrapper #detroit-pistons {
+  grid-row: 5/6;
+  grid-column: 55/59;
+}
+
+.usa-tickets-wrapper #cleveland-cavaliers {
+  grid-row: 6/7;
+  grid-column: 57/61;
+}
+
+.usa-tickets-wrapper #miami-heat {
+  grid-row: 13/14;
+  grid-column: 64/68;
+}
+
+.usa-tickets-wrapper #orlando-magic {
+  grid-row: 12/13;
+  grid-column: 62/66;
+}
+
+.usa-tickets-wrapper #atlanta-hawks {
+  grid-row: 10/11;
+  grid-column: 58/62;
+}
+
+.usa-tickets-wrapper #atlanta-dream {
+  grid-row: 11/12;
+  grid-column: 61/65;
+}
+
+.usa-tickets-wrapper #charlotte-hornets {
+  grid-row: 9/10;
+  grid-column: 64/68;
+}
+
+.usa-tickets-wrapper #washington-wizards {
+  grid-row: 7/8;
+  grid-column: 63/67;
+}
+
+.usa-tickets-wrapper #washington-mystics {
+  grid-row: 7/8;
+  grid-column: 67/71;
+}
+
+.usa-tickets-wrapper #philadelphia-76ers {
+  grid-row: 6/7;
+  grid-column: 65/69;
+}
+
+.usa-tickets-wrapper #connecticut-sun {
+  grid-row: 6/7;
+  grid-column: 69/73;
+}
+
+.usa-tickets-wrapper #new-york-knicks {
+  grid-row: 5/6;
+  grid-column: 67/71;
+}
+
+.usa-tickets-wrapper #new-york-liberty {
+  grid-row: 4/5;
+  grid-column: 66/70;
+}
+
+.usa-tickets-wrapper #brooklyn-nets {
+  grid-row: 5/6;
+  grid-column: 71/75;
+}
+
+.usa-tickets-wrapper #boston-celtics {
+  grid-row: 4/5;
+  grid-column: 72/76;
+}
+
+.usa-tickets-wrapper #toronto-raptors {
+  grid-row: 4/5;
+  grid-column: 60/64;
+}
+
+.usa-tickets-wrapper #toronto-tempo {
+  grid-row: 3/4;
+  grid-column: 58/62;
+}
+
+/* Optimization */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .usa-tickets-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .usa-tickets-wrapper #usa-map {
+    display: none;
+  }
+
+  .usa-tickets-wrapper p {
+    display: inline;
+    padding-top: 0rem;
+  }
+
+  .nba-team-logo {
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: none;
+  }
+
+  .usa-tickets-wrapper .nba-team-logo:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
